@@ -1,0 +1,34 @@
+graph TD
+    A(Input: Geographic Coordinates) --> B{Data Acquisition Module};
+    
+    subgraph B [Data Acquisition Module]
+        direction LR
+        B1(Google Street View API) --> C{Computer Vision Engine};
+        B2(Google Maps, Places, Roads APIs) --> D[API Data Processing];
+    end
+
+    subgraph C [Computer Vision Engine]
+        direction TB
+        C1[Semantic Segmentation &#40;SAM&#41;] --> C3(Segmented Environmental Features);
+        C2[Object Detection Models] --> C3;
+    end
+
+    C3 --> E(Visual Feature Vector);
+    D --> F(API-derived Feature Vector);
+
+    E & F --> G{Feature Matrix Construction};
+    
+    subgraph H [Model Training and Validation]
+        direction LR
+        H1[Manual PEDS Audit Data] --> H2(Ground-Truth PEDS Scores);
+        H3[Feature Matrices from Audited Locations] --> H4{Supervised Learning Algorithm Training};
+        H2 --> H4;
+    end
+    
+    H4 --> I(Validated PEDS Prediction Model);
+    
+    G --> J(Input Feature Matrix for New Location);
+    I --> K{Inference Engine};
+    J --> K;
+    
+    K --> L(Output: Predicted PEDS Walkability Score);

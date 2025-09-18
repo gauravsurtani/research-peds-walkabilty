@@ -140,14 +140,16 @@ dmypy.json
 *.onnx
 *.pb
 
-# Data files
+# Data files (keep some for configuration)
 *.csv
-*.json
 *.xml
-*.txt
 *.dat
 *.npy
 *.npz
+
+# Keep important config files
+!requirements.txt
+!.env.example
 
 # Image files (if you don't want to track them)
 *.png

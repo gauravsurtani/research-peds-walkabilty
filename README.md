@@ -31,6 +31,7 @@ Then open the local URL shown by Streamlit. Click on the map to pick a point, ad
 
 - Flow: see `FLOW.md` for the end-to-end architecture and module responsibilities.
 - Roadmap: see `ROADMAP.md` for phases, milestones, and prioritized TODOs.
+- Spec: see `.kiro/specs/peds-walkability-merge/` for comprehensive requirements, design, and implementation plan.
 
 ## Setup links (Google Maps Platform)
 

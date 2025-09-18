@@ -1,0 +1,23 @@
+# Core dependencies for PEDS Walkability Streamlit App
+streamlit>=1.28.0
+streamlit-folium>=0.15.0
+folium>=0.14.0
+
+# Computer Vision and Image Processing
+opencv-python>=4.8.0
+Pillow>=10.0.0
+numpy>=1.24.0
+
+# Segment Anything Model
+segment-anything>=1.0
+torch>=2.0.0
+torchvision>=0.15.0
+
+# API and HTTP requests
+requests>=2.31.0
+
+# Environment variable management
+python-dotenv>=1.0.0
+
+# Optional: For better performance with CUDA
+# torch[cuda] - uncomment if you have CUDA GPU
